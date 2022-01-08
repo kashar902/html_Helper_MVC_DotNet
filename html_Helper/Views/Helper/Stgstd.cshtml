@@ -1,0 +1,50 @@
+﻿@model html_Helper.Models.Employee
+
+@{
+    ViewBag.Title = "Stgstd";
+}
+
+<h2>Stgstd</h2>
+
+@using (@Html.BeginForm("Stgstd","Helper", FormMethod.Post))
+{
+<table>
+    <tr>
+        <td>@Html.LabelFor(m => Model.ID) </td>
+        <td>@Html.TextBoxFor(m => Model.ID) </td>
+    </tr>
+
+    <tr>
+        <td>@Html.LabelFor(m => Model.ID) </td>
+        <td>@Html.TextBoxFor(m => Model.ID) </td>
+    </tr>
+
+    <tr>
+        <td>@Html.LabelFor(m => Model.Name) </td>
+        <td>@Html.TextBoxFor(m => Model.Name) </td>
+    </tr>
+
+    <tr>
+        <td>@Html.LabelFor(m => Model.Gender) </td>
+        <td>Male: @Html.RadioButtonFor(m => Model.Gender, "Male") </td>
+        <td>Female: @Html.RadioButtonFor(m => Model.Gender, "Female") </td>
+
+    </tr>
+
+    <tr>
+        <td>@Html.LabelFor(m => Model.City) </td>
+        <td>KHI: @Html.CheckBoxFor(m => Model.City, "city1") </td>
+        <td>LHR: @Html.CheckBoxFor(m => Model.City, "city2") </td>
+
+    </tr>
+
+    <tr>
+        <td>@Html.LabelFor(m => Model.Address) </td>
+        <td>@Html.TextAreaFor(m => Model.Address) </td>
+    </tr>
+    <tr>
+        <td><input type="button" value="Submit" /> </td>
+    </tr>
+</table>
+}
+
