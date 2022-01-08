@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "Standardd";
+}
+
+<h2>Standardd</h2>
+
+@*   method , controller,*@
+@using (@Html.BeginForm("Standardd", "Helper", FormMethod.Post))
+{
+<table>
+    <tr>
+        <td>@Html.Label("Name", "Name")</td>
+        <td>@Html.TextBox("textbox", null, new { @class = "text", placeholder = "Enter Your Name" })</td>
+    </tr>
+
+    <tr>
+        <td>@Html.Label("Name", "Name")</td>
+        <td>@Html.TextArea("textbox", null, new { @class = "text", cols = "15", rows = 5 })</td>
+    </tr>
+
+    <tr>
+        <td>@Html.Label("Name", "Name")</td>
+        <td>Male @Html.RadioButton("Male", "Male", true)</td>
+        <td>Female @Html.RadioButton("FeMale", "FeMale", false)</td>
+
+    </tr>
+
+    <tr>
+        <td>@Html.Label("Name", "Name")</td>
+        <td>KHI @Html.CheckBox("city1")</td>
+        <td>LHR @Html.CheckBox("city2")</td>
+
+    </tr>
+
+
+    <tr>
+        <td>@Html.Label("Name", "Name")</td>
+        <td>@Html.Password("password")</td>
+    </tr>
+
+
+    <tr>
+        <td>@Html.Label("Name", "Name")</td>
+        <td>@Html.Hidden("Hidden")</td>
+    </tr>
+    <td>
+        <input type="button" value="Submit" />
+    </td>
+</table>
+}
+
